@@ -1,4 +1,7 @@
 <resources>
     <string name="app_name">My-Bus</string>
     <string name="app_version">1.0.0</string>
+    <string name="home">Beranda</string>
+    <string name="my_account">Akun Saya</string>
+    <string name="order">Pesanan</string>
 </resources>
