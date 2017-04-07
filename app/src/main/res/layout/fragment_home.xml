@@ -2,14 +2,25 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
     tools:context="id.co.vileo.my_bus.Fragment.HomeFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <com.daimajia.slider.library.SliderLayout
+        android:id="@+id/slider"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        custom:pager_animation="Accordion"
+        custom:indicator_visibility="visible"
+        custom:pager_animation_span="1100"
+        custom:auto_cycle="true"
+        />
+
+    <com.daimajia.slider.library.Indicators.PagerIndicator
+        android:id="@+id/custom_indicator"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
-        android:text="@string/home"
-        android:textSize="30sp" />
+        android:gravity="center"
+        />
+
 
 </RelativeLayout>
