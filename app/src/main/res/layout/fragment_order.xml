@@ -4,12 +4,86 @@
     android:layout_height="match_parent"
     tools:context="id.co.vileo.my_bus.Fragment.HomeFragment">
 
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:padding="20dp"
+        android:background="@drawable/box_all_shadow"
+        android:layout_height="150dp"
+        android:id="@+id/layout_not_order">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
-        android:text="@string/order"
-        android:textSize="30sp" />
+        <TextView
+            android:id="@+id/not_active_order"
+            android:layout_width="match_parent"
+            android:textSize="10dp"
+            android:textColor="@color/colorLightBlack"
+            android:layout_marginBottom="10dp"
+            android:layout_height="wrap_content"
+            android:text="@string/not_active_order"/>
+
+        <LinearLayout android:id="@+id/thumbnail"
+            android:layout_below="@+id/not_active_order"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="3dip"
+            android:layout_alignParentLeft="true"
+            android:layout_marginRight="5dip">
+
+            <ImageView
+                android:id="@+id/image_no_order"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/no_order"/>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/thumbnail"
+            android:layout_toRightOf="@+id/thumbnail"
+            android:text="Seluruh pesanan anda akan muncul disini.makin fleksibel mengaturnya dengan masuk ke akun anda"
+            android:textColor="@color/colorLightBlack"
+            android:typeface="sans"
+            android:textSize="10dip"
+            android:gravity="left"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:paddingLeft="15.0dip"
+            android:paddingTop="5.0dip"
+            android:paddingRight="15.0dip"
+            android:paddingBottom="1.0dip"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="50dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/title">
+
+            <Button
+                android:id="@+id/login"
+                android:textStyle="normal"
+                android:textColor="@color/colorWhite"
+                android:layout_width="0.0dip"
+                android:layout_marginRight="15dp"
+                android:layout_height="match_parent"
+                android:background="@drawable/btn_default"
+                android:layout_weight="1.0"
+                android:text="@string/login" />
+
+            <Button
+                android:id="@+id/sign_up"
+                android:textStyle="normal"
+                android:textColor="@color/colorWhite"
+                android:layout_marginLeft="15dp"
+                android:background="@drawable/btn_primary"
+                android:layout_width="0.0dip"
+                android:layout_height="match_parent"
+                android:text="@string/sign_up"
+                android:layout_weight="1.0" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
 
 </RelativeLayout>

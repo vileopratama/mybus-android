@@ -1,7 +1,24 @@
 <resources>
+    <string name="action_settings">Settings</string>
     <string name="app_name">My-Bus</string>
     <string name="app_version">1.0.0</string>
+    <string name="date_of_departure">Tgl.Keberangkatan</string>
+    <string name="destination">Tujuan / Provinsi / Wisata</string>
+    <string name="form_booking">Form Booking</string>
     <string name="home">Beranda</string>
+    <string name="login">Masuk</string>
+    <string name="login_or_signup"><b>Masuk</b> atau <b>Daftar</b>  untuk mengakses beragam fitur keren</string>
     <string name="my_account">Akun Saya</string>
+    <string name="my_pay">My Pay</string>
+    <string name="phone">No Telepon</string>
+    <string name="subscriber">Nama Pemesan</string>
+    <string name="not_active_order"><b>Belum Ada Pesanan Aktif</b></string>
+    <string name="other">Lainnya</string>
     <string name="order">Pesanan</string>
+    <string name="order_now">Pesan sekarang</string>
+    <string name="pick_up_point">Pick Up Point</string>
+    <string name="pick_up_point_area">Area Penjemputan</string>
+    <string name="search_bus">Cari Bus</string>
+    <string name="sign_up">Daftar</string>
+    <string name="total_days">Total Hari</string>
 </resources>

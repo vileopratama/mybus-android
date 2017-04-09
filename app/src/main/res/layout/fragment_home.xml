@@ -5,22 +5,213 @@
     xmlns:custom="http://schemas.android.com/apk/res-auto"
     tools:context="id.co.vileo.my_bus.Fragment.HomeFragment">
 
-    <com.daimajia.slider.library.SliderLayout
-        android:id="@+id/slider"
+    <RelativeLayout
+        android:id="@+id/slide_design"
         android:layout_width="match_parent"
-        android:layout_height="150dp"
-        custom:pager_animation="Accordion"
-        custom:indicator_visibility="visible"
-        custom:pager_animation_span="1100"
-        custom:auto_cycle="true"
-        />
+        android:layout_height="wrap_content">
+        <com.daimajia.slider.library.SliderLayout
+            android:id="@+id/slider"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            custom:pager_animation="Accordion"
+            custom:indicator_visibility="visible"
+            custom:pager_animation_span="1100"
+            custom:auto_cycle="true" />
 
-    <com.daimajia.slider.library.Indicators.PagerIndicator
-        android:id="@+id/custom_indicator"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        />
+        <com.daimajia.slider.library.Indicators.PagerIndicator
+            android:id="@+id/custom_indicator"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_below="@+id/slide_design"
+        android:layout_width="match_parent"
+        android:background="@color/colorGray"
+        android:layout_height="match_parent">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/relative_layout_bottom_border_shadow"
+            android:layout_margin="5dp">
+
+            <LinearLayout
+                android:id="@+id/linear"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/head"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/form_booking"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="14dp"
+                    android:padding="16dp"
+                    android:background="@color/colorPrimary"
+                    android:gravity="center" />
+
+                <ScrollView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                    <LinearLayout
+                        android:id="@+id/linear2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <android.support.design.widget.TextInputLayout
+                            android:id="@+id/date_from"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textColorHint="@color/colorhint"
+                            android:textColor="@color/colortext">
+
+                            <EditText
+                                android:id="@+id/date_departure"
+                                android:textSize="16dp"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="@string/date_of_departure"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginRight="10dp"
+                                android:layout_marginTop="5dp"
+                                android:textColorHint="@color/colorhint"
+                                android:textColor="@color/colortext"
+                                android:maxLength="12"
+                                android:padding="13dp"
+                                android:gravity="left"
+                                android:background="#0000"
+                                android:drawableLeft="@drawable/user"
+                                android:drawablePadding="12dp" />
+
+                        </android.support.design.widget.TextInputLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_height="1dp"
+                            android:background="@color/colorGray"/>
+
+                        <android.support.design.widget.TextInputLayout
+                            android:id="@+id/total_days"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textColorHint="@color/colorhint"
+                            android:textColor="@color/colortext">
+
+                            <EditText
+                                android:textSize="16dp"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="@string/total_days"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginRight="10dp"
+                                android:layout_marginTop="5dp"
+                                android:textColorHint="@color/colorhint"
+                                android:textColor="@color/colortext"
+                                android:maxLength="12"
+                                android:padding="13dp"
+                                android:gravity="left"
+                                android:background="#0000"
+                                android:drawableLeft="@drawable/pass"
+                                android:drawablePadding="12dp" />
+
+                        </android.support.design.widget.TextInputLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_height="1dp"
+                            android:background="@color/colorGray"/>
+
+                        <android.support.design.widget.TextInputLayout
+                            android:id="@+id/pick_up_point_area"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textColorHint="@color/colorhint"
+                            android:textColor="@color/colortext">
+
+                            <EditText
+                                android:textSize="16dp"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="@string/pick_up_point_area"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginRight="10dp"
+                                android:layout_marginTop="5dp"
+                                android:textColorHint="@color/colorhint"
+                                android:textColor="@color/colortext"
+                                android:maxLength="12"
+                                android:padding="13dp"
+                                android:gravity="left"
+                                android:background="#0000"
+                                android:drawableLeft="@drawable/user"
+                                android:drawablePadding="12dp" />
+
+                        </android.support.design.widget.TextInputLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_height="1dp"
+                            android:background="@color/colorGray"/>
 
 
+                        <android.support.design.widget.TextInputLayout
+                            android:id="@+id/destination"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textColorHint="@color/colorhint"
+                            android:textColor="@color/colortext">
+
+                            <EditText
+                                android:textSize="16dp"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="@string/destination"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginRight="10dp"
+                                android:layout_marginTop="5dp"
+                                android:textColorHint="@color/colorhint"
+                                android:textColor="@color/colortext"
+                                android:maxLength="12"
+                                android:padding="13dp"
+                                android:gravity="left"
+                                android:background="#0000"
+                                android:drawableLeft="@drawable/pass"
+                                android:drawablePadding="12dp" />
+
+                        </android.support.design.widget.TextInputLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_height="1dp"
+                            android:background="@color/colorGray"/>
+
+                        <Button
+                            android:id="@+id/button1"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_marginBottom="15dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/btn_default"
+                            android:text="@string/search_bus"
+                            android:textColor="@color/colorWhite" />
+
+                    </LinearLayout>
+                </ScrollView>
+            </LinearLayout>
+        </RelativeLayout>
+    </RelativeLayout>
 </RelativeLayout>

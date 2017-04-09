@@ -1,31 +1,39 @@
 package id.co.vileo.my_bus.Fragment;
 
+import android.app.DatePickerDialog;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
+import android.text.InputType;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.DatePicker;
+import android.widget.EditText;
 import android.widget.Toast;
 
 import com.daimajia.slider.library.Animations.DescriptionAnimation;
 import com.daimajia.slider.library.SliderLayout;
 import com.daimajia.slider.library.SliderTypes.BaseSliderView;
 import com.daimajia.slider.library.SliderTypes.DefaultSliderView;
-import com.daimajia.slider.library.SliderTypes.TextSliderView;
 import com.daimajia.slider.library.Tricks.ViewPagerEx;
 
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
 import java.util.HashMap;
+import java.util.Locale;
 
 import id.co.vileo.my_bus.R;
 
 public class HomeFragment extends Fragment {
     FragmentActivity activity;
     SliderLayout sliderShow;
-    TextSliderView textSliderView;
     DefaultSliderView defaultSliderView;
+    EditText editTextDateDeparture;
+    private DatePickerDialog dateDepartureDialog;
+    private SimpleDateFormat dateFormatter;
 
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
@@ -38,6 +46,7 @@ public class HomeFragment extends Fragment {
                              Bundle savedInstanceState) {
 
         View view = inflater.inflate(R.layout.fragment_home, container, false);
+        dateFormatter = new SimpleDateFormat("dd/MM/yyyy", Locale.US);
         findViewById(view);
         return view;
     }
@@ -94,10 +103,28 @@ public class HomeFragment extends Fragment {
             }
         });
 
-        /*textSliderView = new TextSliderView(activity);
-        textSliderView.description("Mantap")
-                .image("https://da8hvrloj7e7d.cloudfront.net/imageResource/2017/04/06/1491472578824-c2a2536b10fa1fbaeadfe683b2b774d8.jpeg");
-        sliderShow.addSlider(textSliderView);*/
+        editTextDateDeparture = (EditText) view.findViewById(R.id.date_departure);
+        editTextDateDeparture.setInputType(InputType.TYPE_NULL);
+        editTextDateDeparture.requestFocus();
+        editTextDateDeparture.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                dateDepartureDialog.show();
+            }
+        });
+
+        Calendar newCalendar = Calendar.getInstance();
+        dateDepartureDialog = new DatePickerDialog(activity, new DatePickerDialog.OnDateSetListener() {
+
+            public void onDateSet(DatePicker view, int year, int monthOfYear, int dayOfMonth) {
+                Calendar newDate = Calendar.getInstance();
+                newDate.set(year, monthOfYear, dayOfMonth);
+                editTextDateDeparture.setText(dateFormatter.format(newDate.getTime()));
+            }
+
+        },newCalendar.get(Calendar.YEAR), newCalendar.get(Calendar.MONTH), newCalendar.get(Calendar.DAY_OF_MONTH));
+
+
     }
 
     @Override
