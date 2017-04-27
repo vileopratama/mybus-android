@@ -198,7 +198,7 @@
                             android:background="@color/colorGray"/>
 
                         <Button
-                            android:id="@+id/button1"
+                            android:id="@+id/btn_search"
                             android:layout_marginTop="10dp"
                             android:layout_marginLeft="10dp"
                             android:layout_marginRight="10dp"

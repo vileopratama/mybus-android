@@ -3,8 +3,10 @@
     <color name="button_pressed">#ff8a00</color>
     <color name="button_focused">#ff8a00</color>
     <color name="button_default">#1c76bb</color>
-    <color name="colorDefault">#F3AD46</color>
-    <color name="colorPrimary">#37509B</color>
+    <color name="colorDefault">#FF7200</color>
+    <color name="colorDefaultDark">#9c5319</color>
+    <color name="colorPrimary">#3A53A4</color>
+    <color name="colorPrimary2">#37509B</color>
     <color name="colorGray">#d7d7d7</color>
     <color name="colorLightGray">#fafafa</color>
     <color name="colorPrimaryDark">#289C2B</color>
